@@ -51,7 +51,7 @@ answer.productName = function() {
 answer.inStockStores = function() {
     let instock = [];
     for (var i = 0; i <= keys.length - 1; i++) {
-        if (parseInt(stores[keys[i]]) === 0 ) {
+        if (parseInt(stores[keys[i]]) !== 0 ) {
             instock.push(keys[i]);
         }
     }
