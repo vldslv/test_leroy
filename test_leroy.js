@@ -64,9 +64,10 @@ answer.maxCountStore = function() {
         "count": parseInt(stores[keys[0]]),
     }
     for (var i = 1; i <= keys.length - 1; i++) {
-        if (parseInt(stores[keys[i]]) > max_count["count"] ) {
-            max_count["store"] = parseInt(keys[i]);
-            max_count["count"] = parseInt(stores[keys[i]]);
+        let k = keys[i];
+        if (parseInt(stores[k]) > max_count["count"] ) {
+            max_count["store"] = parseInt(k);
+            max_count["count"] = parseInt(stores[k]);
         }
     }
     return max_count;
