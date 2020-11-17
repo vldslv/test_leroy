@@ -63,7 +63,7 @@ answer.maxCountStore = function() {
         "store": parseInt(keys[0]),
         "count": parseInt(stores[keys[0]]),
     }
-    for (var i = 0; i <= keys.length - 1; i++) {
+    for (var i = 1; i <= keys.length - 1; i++) {
         if (parseInt(stores[keys[i]]) > max_count["count"] ) {
             max_count["store"] = parseInt(keys[i]);
             max_count["count"] = parseInt(stores[keys[i]]);
