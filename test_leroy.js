@@ -49,13 +49,13 @@ answer.productName = function() {
 };
 
 answer.inStockStores = function() {
-    let instock = [];
+    let inStock = [];
     for (var i = 0; i <= keys.length - 1; i++) {
         if (parseInt(stores[keys[i]]) !== 0 ) {
-            instock.push(keys[i]);
+            inStock.push(keys[i]);
         }
     }
-    return instock;
+    return inStock;
 };
 
 answer.maxCountStore = function() {
