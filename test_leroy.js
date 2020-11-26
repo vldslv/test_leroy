@@ -41,8 +41,8 @@ let answer = {
     }
 };
 
-let stores = answer.stock.stocks["34"];
-let keys = Object.keys(stores);
+let stores = answer.stock.stocks["34"],
+    keys = Object.keys(stores);
 
 answer.productName = function() {
     return answer.displayedName.displayedName.value;
