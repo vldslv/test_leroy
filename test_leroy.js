@@ -39,14 +39,14 @@ let answer = {
             }
         }
     }
-}
+};
 
 let stores = answer.stock.stocks["34"];
 let keys = Object.keys(stores);
 
 answer.productName = function() {
     return answer.displayedName.displayedName.value;
-}
+};
 
 answer.inStockStores = function() {
     let instock = [];
@@ -56,19 +56,19 @@ answer.inStockStores = function() {
         }
     }
     return instock;
-}
+};
 
 answer.maxCountStore = function() {
-    let max_count = {
+    let maxCount = {
         "store": parseInt(keys[0]),
         "count": parseInt(stores[keys[0]]),
-    }
+    };
     for (var i = 1; i <= keys.length - 1; i++) {
         let k = keys[i];
-        if (parseInt(stores[k]) > max_count["count"] ) {
-            max_count["store"] = parseInt(k);
-            max_count["count"] = parseInt(stores[k]);
+        if (parseInt(stores[k]) > maxCount.count ) {
+            maxCount.store = parseInt(k);
+            maxCount.count = parseInt(stores[k]);
         }
     }
-    return max_count;
-}
+    return maxCount;
+};
